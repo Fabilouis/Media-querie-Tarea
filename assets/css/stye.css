@@ -3,22 +3,35 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: blue;
+    background-color: #00824c;
     color: white;
+    height: 50px;
 
+
+}
+.name{
+    margin-left: 10px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 .icono1{
     display: flex;
     width: 40px;
     height: 40px;
     margin-left: 10px;
-    margin-top: 20px;
+
 
 }
 .texto{
     display: flex;
     justify-content: end;
     width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
     
 }
 .texto p{
@@ -26,45 +39,42 @@
 }
 .main{
     grid-area: main;
-    background-color: #DDA0DD;
+    background-color: #a0ddce;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    box-shadow: violet;
-    width: 1100px;
+    gap: 40px;
+    background-color: #2be296;
+    box-shadow: ;
+    width: 100%;
 }
 .sidebar{
     grid-area: sidebar;
-    background-color: #8A2BE2;
+    background-color: #2be296;
     color: white;
     display: flex;
-    flex-direction: column; /* Orientación vertical */
-    width: 270px; /* Ancho del sidebar */
+    flex-direction: column;
+    
     padding: 10px;
     
 }
 .buscar {
-    margin-bottom: 15px; /* Espacio entre productos */
+    margin-bottom: 15px; 
     padding: 10px;
-    background-color: #DDA0DD;
+    background-color: #0d302e;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 5px;
     text-align: center;
     box-shadow: 5px 5px 10px;
-    font-family: "Dancing Script", cursive;
+    font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: <weight>;
     font-style: normal;
 }
-
-.footer{
-    grid-area: footer;
-    background-color: grey;
-}
 .grid-container{
+    width: 100%;
     display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
-    grid-auto-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas: 
     'header header'
     'sidebar main'
@@ -75,26 +85,27 @@
 .card{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     background-color: white;
     box-shadow: 5px 5px 10px;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
+    
 
 }
 .card img {
     width: 80%;
     height: 80%;
     object-fit: cover;
+    border-radius: 40px;
+    margin-top: 20px;
 }
 .btncomprar {
-    background-color:#4B0082;
+    background-color:#008271;
     color:white;
     width: 100%;
     border: 0;
     padding: 0.5rem;
+    border-radius: 30px;
+    
 }
 .footer{
         grid-area: footer;
@@ -102,7 +113,7 @@
        flex-direction: row;
         justify-content: center;
         text-align: center;
-        background-color: blue;
+        background-color: #00824c;
         color: white;       
 }
 .icono2{
@@ -120,7 +131,6 @@
             'main'
             'sidebar'
             'footer';
-        
     }
 
     .main {
@@ -137,13 +147,24 @@
     }
 
     .header .texto {
+        display: none;
         flex-direction: column;
         align-items: center;
+    
+    }
+    .header .name {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .icono1{
+        display: flex;
+        width: 10px;
+        justify-items: center;
+        margin-right: 20px;
+    
     }
 
-    .icono1 {
-        margin: 0 auto;
-    }
 }
 /* @media(min-width: 577px) and (max-width:1200px){
     .grid-container {
